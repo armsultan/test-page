@@ -51,6 +51,27 @@ Test pages include:
 `armsultan/test-page:html-snapt`
 ![html-snapt](media/html-snapt.png)
 
+## How-to
+
+### Pull and run from Docker Hub
+
+```bash
+# Plain text page
+docker run -P -d armsultan/test-page:plain-text
+
+# HTML Simple page
+docker run -P -d armsultan/test-page:html
+
+# HTML Blue page
+docker run -P -d armsultan/test-page:blue
+
+# HTML Green page
+docker run -P -d armsultan/test-page:green
+
+# HTML Snapt branded page
+docker run -P -d armsultan/test-page:snapt
+```
+
 ### Build and Run Docker images locally
 
 ```bash
@@ -95,23 +116,4 @@ docker run -d -p 80:80 test-page:snapt
 # For example
 docker tag test-page:plain-text armsultan/test-page:plain-text
 docker push armsultan/test-page:plain-text
-```
-
-### Pull and run from Docker Hub
-
-```bash
-# Plain text page
-docker run -P -d armsultan/test-page:plain-text
-
-# HTML Simple page
-docker run -P -d armsultan/test-page:html
-
-# HTML Blue page
-docker run -P -d armsultan/test-page:blue
-
-# HTML Green page
-docker run -P -d armsultan/test-page:green
-
-# HTML Snapt branded page
-docker run -P -d armsultan/test-page:snapt
 ```
