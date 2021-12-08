@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="A simple test page.">
+    <meta name="author" content="Armand Sultantono">
+
+    <meta property="og:title" content="A simple test page">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A simple test page">
+
+    <title>Test Page</title>
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,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Z/8BRWb/AEVm/wFFZv8MTW3/NGuF/2CLn/8ARWb/EmaL/0zM//9NzP//Tcz//03M//9NzP//TMz/Wk3M/5xNzP//Tcz//03M//9MzP//Tcz//yB8pf8ARWb/AEVm/wBGZ/8JVXj/FGmO/x15of8khK3/KI23/yqQu/8qkLv/KYy3/ySErf8deKD/FGiO/wlVeP8ARmf/AEVm/wFFZv8gfaX/Tcz+/03M//9NzP//Tcz//03M//9NzP+cTcz/zE3N//9NzP//Tc3//03M//9NzP//Ssf4/zSgzf87rNr/SMT2/03M//9MzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//0jE9v86rNr/NKDM/0rH+f9NzP//Tcz//03M//9NzP//Tcz//0zM/8xNzP/sTcz//03M//9MzP//Tcz//03M//9NzP7/Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03N/v9NzP7/Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tc3//03M//9NzP7/Tcz/7E3M//xNzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcr+/03M//9NzP//Tcz+/03M//9Nzf//Tcz//03M//9NzP//Tcv+/03M//9NzP//Tcz//03M//9NzP//Tcz+/03M//9NzP/8Tcz//E3M/v9NzP//Tcz//03M//9NzP//Tcz//03L/v8NXYL/HXih/03M//9NzP7/Tcz//yaIsf8JVXn/S8b4/0rG+P8JVHf/Joix/03M//9MzP//Tcz//x15of8OXYL/Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//xNzP/sTcz//03M//9NzP//Tcz+/03M//9NzP//Tcz//w1cgf8BR2j/P7Tk/03M//9Fvu//BEtt/wdRdP9Lyfz/Ssn7/wdRc/8ETG7/Rb3v/03M//8/tOT/AUdo/w5dg/9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz/7EzM/8xNzP//Tcz//03M/v9NzP//TMz//03M//9NzP//NKDO/wBFZv8KV3r/L5bD/w9fhf8ARWb/LJK+/03M//9NzP//LJK9/wBEZv8PX4P/L5fD/wpXev8ARWb/NKHO/03M//9NzP//Tc3//03M//9NzP//Tcz//03M//9MzP/MTcz/nE3M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//JISu/wBFZv8BRWb/AEVm/x13n/9My/7/TM3//0zM//9My/7/HHef/wBFZv8ARWf/AERm/ySFr/9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//0zM/5xMzP5aTcz//03N//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//PbHf/y2Tvv86qtj/Tcz//0zM//9NzP//Tcz//03M//9MzP//OarY/y2Tv/89r9//Tcz//03M//9MzP//Tcz//03M/v9MzP//TMz//03M//9NzP//TMz/WlC+/xBNzP/2Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03N//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03N//ZQv/8QAAABAEzL/55NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz+/03M//9NzP//TMz//03M//9NzP//Tcz+/03M//9NzP//TMz//03M//9NzP//Tcz//0zM//9NzP//Tcz//03M//9NzP//TMv/ngAAAAAAAAAASsn/JkzM/vpNzP7/Tcz//03M//9NzP//Tcz//03M//9MzP//Tcz//03M//9NzP//TMz//03M/v9NzP//Tcz//03M//9Nzf//Tcz//03M//9MzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//0zM//pKyf8mAQEAAAAAAAAAAAAATMv/jU3M//9MzP//Tcz+/03M//9NzP//Tcz//03M//9NzP//Tcz//0zM//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcz+/03M//9NzP//TMv/jQABAAAAAAAAAAAAAAAAAABNzP8KTcv/1E3M//9NzP//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tc3//03M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//9Jxvj/IoGq/wZPcf8ARWb/AEVm/wBFZv8PUG//Tn6V/4OktP+jvMj/us3V/7nM1f+iu8f/gKKz/0l7kv8MTm3/AUVm/wBFZv8ARWb/Bk9x/yKBqv9Jx/j/Tcz//03M//9NzP//Tcz//03M/v9NzP//Tc3/807N/2UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wFMyv9ATcv/6E3M//9NzP//Tcz//03M//9NzP//Tcz//0fC8/8feqP/AUdo/wBFZv8GSmr/JmB8/4qquf/q8PL////////////////////////////////////////////m7fD/g6W1/yJee/8FSWn/AEVm/wFHaP8deKH/R8Hz/03M//9NzP//TMz//03M/v9NzP//Tcz//03L/+hNyv8/AP//AQAAAQAAAAAAAAAAAAAAAAAAAQAAAAAAAFHR/xZMzP+5Tcz//k3M//9NzP//Tcz//03M//9NzP//SMX3/x55of8BSWn/AUVm/w5Pbv93m63/4Ojt/////////////v7+//z9/v/4+/v/9vn6//j5+v/8/f3//v7+/////////////////9zm6/9wlqn/DU1t/wBFZv8BR2n/HXmh/0nG+P9NzP//Tcz//03M//9NzP//Tcz//03M//5MzP+4Sc7/FQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEzN/3VOzf/6Tcz//03M//9NzP//Tcz//03M//9Ny/7/I4Kr/wFHaP8ARGb/AUZn/2uTpv+Vsb//faCx/2KMof9Of5X/OnCK/zJqhf8qZID/KGJ+/yljf/8waIP/OG2H/0BzjP9TgZj/bJSn/4uquf+fucX/apKl/wFFZv8ARWb/AUdo/yOCq/9Nyv7/Tcz//03M//9NzP//Tcz//03M//9OzP/6Tcr/dAAAAAAAAAAAAAAAAAAAAAAAAAAAUM//IE3M//NNzP//Tcz//03M//9NzP//Tcz//03M//83ptT/B09y/wBFZv8ARWb/AEVm/wBFZv8ARWb/AEVm/wBFZv8ARWb/AEVm/wBFZ/8BRmf/AUZn/wFGZ/8BRmf/AEVm/wBFZv8ARWb/AUVm/wBFZv8ARWb/AEVm/wBFZv8ARWb/AEVm/wZPcv84ptX/Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz/8krW/x8AAQAAAAAAAAAAAAAzzP8FTMz/n03M//9NzP//Tcz//03M//9NzP//TMz//0nF9/8cdp7/AEZn/wBFZv8BRWb/Ckxs/yRfev86boj/Tn6V/1yInf9mkKP/b5ao/3abrf9+obL/gKKy/4Cisv9+obL/dput/2+Wqf9qkqX/XYme/09+lf87cIn/J2B9/wtNbf8ARWb/AUVm/wBGZ/8cdp7/ScX3/03M//9NzP//Tcz//03M//9NzP//Tcz//0zN/51A//8EAAAAAAAAAABLzf8zTsz/403M//9NzP//Tcz//03M//9NzP//Tcz//0K56P8HUnT/AEVm/xNTcP+atML/1ODl/+Do7P/n7vH/7vP1//P2+f/3+Pr/+fv8//v8/f/+/v7//v7+//7+/v/+/v7//P39//r7/P/4+vv/9ff4/+/z9f/o7vH/4ent/9Tf5f+WssD/ElJx/wBFZv8HUHT/Qrjp/03M/v9NzP//Tcz//03M//9NzP//Tcz//0zM/+NMzP8yAAAAAID//wJOzP92Tcz/+k3M//9NzP//Tcz//03M//9NzP//Tcz//zGbyP8ARWb/AEVm/1SCmP/9/f7////////////7/P3/9Pf5//D09v/r8PP/6O7x/+Xs8P/j6+7/4uru/+Lq7v/j6u7/5ezw/+jv8f/r8fP/8fX2//X3+f/7/P3////////////8/f3/T3+W/wBFZv8ARWb/MZzI/03M//9NzP//Tcz//03M//9NzP//Tcz//0zM/vpOzP92gP//AkvS/xFNzf+yTcz//03M//9NzP//Tcz//03M//9NzP//Tcz//yKCq/8ARWb/AEVm/67Ez//N2+H/qsHM/4+uvP92m63/YIug/1SCmP9Ed4//PHGK/zNqhf8sZYD/K2R//ypkf/8sZYD/M2qF/zxxiv9Fd4//VIOZ/2GLof92mq3/ka68/6vBzP/O2+H/qsHN/wBFZv8ARWb/I4Kr/03M//9NzP//Tcz//03M//9NzP//TMz//03M//9Nzf+yS9L/EUnM/yNMzP/mTcz//03M//9NzP//Tcz//03M//9NzP//Tcz//x97pP8ARWb/AEVm/yRffP8aWHb/Dk9v/wZJaf8BRWb/AEVm/wBFZ/8ARWb/AEVm/wBFZv8ARWb/AEVm/wBFZv8ARWb/AEVm/wBFZv8ARWb/AEVm/wBFZ/8BRGb/B0lp/w5Pb/8aWHb/I198/wBFZv8ARWb/Hnui/03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9OzP/mScz/I03J/0xNzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//yuQu/8BR2f/AEVm/wBFZ/8ARWb/AEVn/wJJa/8FTnD/B1J1/wlVef8LWHz/D1yA/xBihv8TZov/FGiO/xRojv8TZov/EGKG/w5cgP8LWHz/CVV4/wdSdf8FT3D/Aklr/wBFZ/8ARWb/AEVm/wBFZv8BRmf/LJC8/03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcn/TEzM/4ZNzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//0S97/8acpr/DVp+/xJkif8bdZz/JIWv/y2UwP81o9D/PbDf/0K56v9HwvT/S8j6/0zL/v9Nzf//Tcz//03M//9NzP//Tcv+/0vI+v9HwvT/Qrnq/z2v3/81o9D/LZXA/ySFr/8bdJz/EmSJ/wxafv8ac5r/Rbzt/03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//TMz/hkzL/7ZNzP//Tcz//03M//9NzP//Tcz//03M/v9NzP//TMz//03L/v9IxPb/RLzt/0bA8f9Jxfj/TMr9/03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//0zK/f9Jxvj/RsDx/0S87f9Iw/X/Tcv+/03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMv/tkzM/9pNzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M/v9NzP//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz/2kzM//BNzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M/v9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz/8E7M//1NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//0zL//9NzP//Tcz//03M/v9NzP//TMv+/03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Ny/7/Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tsz//U7M//1NzP//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//yB/qP8JVXj/N6XS/03M//9NzP//TMz//03M/v9Kx/n/Hnqi/wdSdf8zncr/Tcv+/03L/v8yncr/B1J0/x56ov9Kxvn/Tcz//03M//9Nzf//Tcz//zel0v8JVHj/IX+o/03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tsz//UzM//BNzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcv+/wdRdP8ARWb/D2CF/0rH+v9NzP//Tcz//03M//82pdL/BU9x/wBFZ/8igKn/S8n8/0vJ/P8igKn/AEVm/wVPcf83pdL/Tcz//03M//9NzP//S8f6/w9ghf8ARWb/B1F0/03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//TMz/8EzM/9pNzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//x97pP8ARWb/AUZn/yuPu/9NzP//TMz//0jE9/8acpv/AUZn/wRLbf8wmsf/TMz//03M//8wm8f/BEtt/wBGZ/8ac5v/SMT2/03M//9NzP//K4+7/wFGZ/8ARWb/IH2l/03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz/2kzL/7ZNzf//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//0C15f8IUnX/AEVm/wZPcf8yncn/Qrvr/yeKtP8BR2j/AEVm/xFiiP9HwfP/Tcz//03M//9HwvP/EGKH/wBFZ/8BR2j/Jomz/0O76v8yncr/B09x/wBFZ/8IU3X/QLbl/03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMv/tkzM/4ZNzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//0vI+/8pjLf/A0pr/wBFZv8DS23/CVV4/wBFZv8ARGb/CFN1/zur2/9NzP//Tcz//03M/v9NzP//O6va/whTdv8ARWb/AEVm/wlVeP8DSm3/AEVm/wNKbP8ojLf/S8j7/03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz/hk3J/0xNzP//Tcz//03M//9NzP//Tcz//03M/v9Nzf//Tcz//03M/v9NzP//Tcz//03M/v9Jxff/JIWv/wFGZ/8ARWb/AEVm/wBFZv8KVnr/OafV/03L/v9NzP//Tcz//03M/v9Nzf//Tcv+/zin1f8KVnn/AEVm/wBFZv8ARWb/AUZn/ySGr/9Jxff/Tcz//03M//9NzP//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcn/TEnM/yNOzP/mTcz//03M//9Nzf//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//zut2/8ee6L/F22T/yWFr/9Duuv/Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9Duuv/JIWv/xdtk/8eeqL/O6zb/03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9MzP/mScz/I0vS/xFNzf+yTcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M/v9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP+yS9L/EYD//wJOzf92TMz/+k3M/v9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M/v9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//0zM//pOzf92gP//AgAAAABMzP8yTMz/403M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//0zM/+NLyf8zAAAAAAAAAABA//8ETM3/nU3M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//0zL/55A//8EAAAAAAAAAAAAAAAASs7/H03L//JNzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz/8krO/x8AAAAAAAAAAAAAAAAAAAAAAAAAAE3K/3ROzP/6Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M/v9Nzf//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9OzP/6Tcr/dAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAEnO/xVMzP+4Tcz//k3M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M/v5MzP+4UcX/FgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//gFNy/8/Tcz/503M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M/v9NzP//Tcz//03L/+hMyv9AAP//AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATM3/ZU3N//NNzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tc3/80zN/2UAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYD/Ak3L/3BMy//tTcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9My//tS83/cACA/wIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEnb/gdNy/9wTc3/803M/v9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//TMz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//TMz//03M/v9NzP//Tcz//03M//9NzP//Tcz//03N//NLzf9wSdv/BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgP8CTc3/ZU3M/+dNzP/+Tcz//03M//9Nzf//TMz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9Nzf//TMz//03M//9NzP/+Tcv/6E7N/2UAgP8CAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE3K/z9MzP+4T8z/+k3M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//TMz//07M//pMzP+5TMv/QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAD//wFJzv8VTcr/dE3L//JNzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9Nzf//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M//9NzP//Tcz//03M/v9Nzf//Tcz/80zN/3VR0f8WAP//AQAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAErO/x9Mzf+dTMz/40zM//pNzP//Tcz//03M//9NzP//Tcz//03M/v9NzP//Tcz//03M/v9NzP//Tcz//03M//9NzP//TMz//03M//9NzP//TMz/+k7M/+NNzP+fUM//IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA//8ETcz/Mk7N/3ZNzP+yTsz/5k3M//9NzP//Tcz//03M//9NzP//Tcz//03M/v9NzP//Tcz//03M//9NzP//Tcz//0zM/+ZNzP+yT83/dkvN/zMzzP8FAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAID//wJL0/8RScz/I03J/0xMzf+GTcv/tkzM/9pMzP/wTsz//U7M//1MzP/wTMz/2kzL/7ZMzP+GTcn/TEnM/yNL0v8RgP//AgAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            /* https://webgradients.com/ */
+            background-color: #DCD9D4;
+            background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%);
+            background-blend-mode: soft-light,screen;
+            background-size: 300%;
+        }
+
+        .planet {
+            max-width: 150px;
+            padding-bottom: 10%;
+            padding-top: 10%;
+        }
+
+        .logo {
+            max-width: 400px;
+            padding-bottom: 10%;
+            padding-top: 10%;
+        }
+
+        div.info p {
+            display: table-row;
+            text-align: left;
+            font: 100%;
+        }
+
+        #info-page {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            right: 20%;
+            bottom: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #info-page .content {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .content h2.header {
+            font-size: 18vw;
+            line-height: 1em;
+            position: relative;
+        }
+
+        .content h2.header:after {
+            position: absolute;
+            content: attr(data-text);
+            top: 0;
+            left: 0;
+            right: 0;
+            background-size: 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+            animation: animate 10s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                background-position: 0 0;
+            }
+
+            25% {
+                background-position: 100% 0;
+            }
+
+            50% {
+                background-position: 100% 100%;
+            }
+
+            75% {
+                background-position: 0% 100%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        .content h4 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #000;
+            font-size: 2em;
+            max-width: 600px;
+            position: relative;
+            text-align: left;
+
+        }
+
+        .content h4:after {
+            position: absolute;
+            content: attr(data-text);
+            top: 0;
+            left: 0;
+            right: 0;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            color: #0d0d0d;
+        }
+
+        .content .buttons {
+            margin: 25px 0;
+            display: inline-flex;
+        }
+
+        .content .buttons a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            border: 2px solid #69a6ce;
+            color: #69a6ce;
+            font-weight: 500;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .content .buttons a:hover {
+            background: #69a6ce;
+            color: #fff;
+        }
+
+        .content .footer {
+            padding-bottom: 10%;
+            padding-top: 10%;
+        }
+
+        span.code {
+            font-family:courier, monospace;
+            background-color: seashell;
+        }
+          
+
+    </style>
+</head>
+
+<body onload="checkRefresh();">
+    <div id="info-page">
+        <div class="content">
+
+            <h4 data-text="Server Information">
+                Server Information:
+            </h4>
+
+            <div class="info">
+
+                <p><strong><span>Server name:</span>&nbsp;<span class="code">_hostname</span></strong></p>
+                <p><span>Server address:</span>&nbsp;<span class="code">_server_addr:_server_port</span></p>
+                <p class="smaller"><span>Status code:</span>&nbsp;<span class="code">_status</span></p>
+                <p class="smaller"><span>URI:</span>&nbsp;<span class="code">_request_uri</span></p>
+                <p class="smaller"><span>Cookies:</span>&nbsp;<span class="code">_http_cookie</span></p>
+                <p class="smaller"><span>User-Agent:</span>&nbsp;<span class="code">_http_user_agent</span></p>
+                <p class="smaller"><span>Date:</span>&nbsp;<span class="code">_time_local</span></p>
+                <p class="requestid"><span>Request ID:</span>&nbsp;<span class="code">_request_id</span></p>
+            </div>
+
+
+            <div class="footer"><input type="checkbox" id="check" onchange="changeCookie()"> Auto Refresh
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+<!-- Place Javascript last -->
+
+<script>
+    var ref;
+    function checkRefresh() {
+        if (document.cookie == "refresh=1") {
+            document.getElementById("check").checked = true;
+            ref = setTimeout(function () { location.reload(); }, 1000);
+        } else {
+        }
+    }
+    function changeCookie() {
+        if (document.getElementById("check").checked) {
+            document.cookie = "refresh=1";
+            ref = setTimeout(function () { location.reload(); }, 1000);
+        } else {
+            document.cookie = "refresh=0";
+            clearTimeout(ref);
+        }
+    }
+</script>
+
+</html>

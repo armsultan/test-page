@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: -webkit-repeating-linear-gradient(-45deg, #000000, #191b1b, #2a262b, #625e5d, #413a43, #49494a, #1e1223);
+    background-size: 300%;
+}
+
+.planet {
+    max-width: 150px;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+.logo {
+    max-width: 400px;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+div.info p {
+    display: table-row;
+    text-align: left;
+    font: 100%;
+}
+
+#info-page {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #2b3234;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#info-page .info .detail {
+    color: #fff;
+}
+
+#info-page .content {
+    max-width: 600px;
+    text-align: center;
+
+}
+
+.content h2.header {
+    font-size: 18vw;
+    line-height: 1em;
+    position: relative;
+
+}
+
+.content h2.header:after {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    right: 0;
+    background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+    animation: animate 10s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    25% {
+        background-position: 100% 0;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.content h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2em;
+    max-width: 600px;
+    position: relative;
+    text-align: left;
+
+}
+
+.content h4:after {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0;
+    right: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: azure;
+}
+
+.content .buttons {
+    margin: 25px 0;
+    display: inline-flex;
+}
+
+.content .buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    border: 2px solid #69a6ce;
+    color: #69a6ce;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.content .buttons a:hover {
+    background: #69a6ce;
+    color: #fff;
+}
+
+.content .footer {
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+.content .copyright {
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+input[type="checkbox"]:checked+label::after {
+    content: '';
+    position: absolute;
+    width: 1.2ex;
+    height: 0.4ex;
+    background: rgba(0, 0, 0, 0);
+    top: 0.9ex;
+    left: 0.4ex;
+    border: 3px solid blue;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input[type="checkbox"] {
+    line-height: 2.1ex;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    position: absolute;
+    left: -999em;
+}
+
+input[type="checkbox"]+label {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+input[type="checkbox"]+label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: -25%;
+    height: 2ex;
+    width: 2ex;
+    background-color: white;
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 4px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25);
+    margin-right: 0.5em;
+}
+
+span.code {
+    font-family:courier, monospace;
+    color: azure;
+    background-color:black;
+}
