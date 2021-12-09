@@ -209,13 +209,13 @@
         </div>
     </div>
 </body>
-
 <!-- Place Javascript last -->
-
 <script>
+
     var ref;
     function checkRefresh() {
-        if (document.cookie == "refresh=1") {
+
+        if (document.cookie.indexOf('refresh=1') != -1 ) {
             document.getElementById("check").checked = true;
             ref = setTimeout(function () { location.reload(); }, 1000);
         } else {
@@ -230,6 +230,7 @@
             clearTimeout(ref);
         }
     }
+
 </script>
 
 </html>

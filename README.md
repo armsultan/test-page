@@ -11,7 +11,6 @@ and port as wells as the request URI and the local time of the webserver.
 ## Screenshots
 
 `armsultan/test-page:plain-text`
-
 ```bash
 curl <ip>:<port>
 
@@ -23,6 +22,25 @@ Cookies:
 User-Agent: curl/7.74.0
 Date: 08/Dec/2021:20:17:06 +0000
 Request ID: e51ab69a0c78cdec290affe3ce65d841
+```
+
+`armsultan/test-page:json`
+```bash
+curl <ip>:<port>
+{
+    "data": [
+        {
+            "Server name": "a401c6a20b10",
+            "Server address": "172.17.0.2:80",
+            "Status code": "200",
+            "URI": "/",
+            "Cookies": "",
+            "User-Agent": "curl/7.74.0",
+            "Date": "08/Dec/2021:21:02:19 +0000",
+            "Request ID": "fc1880280ae2d2011eac0e28a0eaeaa3"
+        }
+    ]
+}
 ```
 
 `armsultan/test-page:html`
@@ -59,6 +77,9 @@ Test pages include:
 # Plain text page
 docker run -P -d armsultan/test-page:plain-text
 
+# JSON page
+docker run -P -d armsultan/test-page:json
+
 # HTML Simple page
 docker run -P -d armsultan/test-page:html
 
@@ -80,6 +101,13 @@ docker run -P -d armsultan/test-page:snapt
 docker build --no-cache -t test-page:plain-text -f DockerfilePlainText .
 # Run
 docker run -d -p 80:80 test-page:plain-text
+
+# JSON PAGE
+# Build 
+docker build --no-cache -t test-page:json -f DockerfilePlainJSON .
+# Run
+docker run -d -p 80:80 test-page:json
+
 
 # HTML SIMPLE PAGE
 # Build 
@@ -117,3 +145,4 @@ docker run -d -p 80:80 test-page:snapt
 docker tag test-page:plain-text armsultan/test-page:plain-text
 docker push armsultan/test-page:plain-text
 ```
+
