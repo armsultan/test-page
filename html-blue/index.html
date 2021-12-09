@@ -1,205 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+
+    <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="A BLUE test page.">
     <meta name="author" content="Armand Sultantono">
 
-    <meta property="og:title" content="A BLUE test page">
+    <meta property="og:title" content="A simple test page">
     <meta property="og:type" content="website">
     <meta property="og:description" content="A BLUE test page">
 
-    <title>I'm Blue!</title>
-    <link rel="icon" type="image/png"
-        href="data:image/png;base64,AAABAAMAEBAAAAEAIABoBAAANgAAACAgAAABACAAKBEAAJ4EAAAwMAAAAQAgAGgmAADGFQAAKAAAABAAAAAgAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJlmImmZZyLzmWYj/5lnIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5hmIv+ZZyL/mWYi/5lnIv+ZZiL/mWYi85lmI2mYZiPzmGcj/5lmIv+YZiL/mGYj/5lmIv+ZZyL/mWYi/5hnIv+YZiP/mWYi/5lmIv+ZZiL/mWci/5hnIv+YZiLzmGYi/5lmI/+YZiL/mWcj/5hmIv+ZZiP/t41V/61+Qf+ZZiP/mGYj/5lnI/+YZyL/mWYj/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+aZiP/zqt7//Xcu//w1rP/o3Mz/5hmIv+ZZiL/mWYi/5lmIv+ZZyL/mWci/5hmI/+ZZiL/mWYj/5lmIv+aaSX/1LKF//Xdu//13bv/9N27/9q6j/+ZZiL/mWYj/5hnIv+ZZiL/mWYi/5hnIv+ZZiL/mWci/5hmIv+daij/2ruO//Xduv/13Lv/17aJ//Xdu//13Lv/u5FZ/5lmI/+YZiP/mGYi/5hmIv+ZZiL/mWYi/5hnI/+ZZyP/vpdg//Xdu//03Lr/wZpl/5lmIv/TsoL/9d27/+/Ur/+hcS//mWYi/5hmI/+YZiL/mWci/5lmIv+YZiP/mWYi/6V1N//ZuY3/uY9X/5hmI/+YZiL/oW4s/+3SrP/13Lv/1bSH/5lnI/+ZZiL/mWYi/5hnIv+ZZiL/mGYi/5lmIv+YZiL/mWci/5lmIv+ZZyP/mWYi/5lmIv+5jlX/9N27//Xduv+0i1H/mWYi/5lmIv+YZiP/mWYj/5lmIv+ZZyL/mWYi/5hmIv+YZiL/mWci/5hmIv+YZyL/mWYi/9i4i//13bv/69Cq/59sKv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5hnI/+ZZiL/mWYi/5lmI/+icjP/79Wx//Tdu//Rrn7/mWci/5lmIv+YZyL/mWYi/5lmIv+ZZiL/mGYi/5lmI/+YZyL/mGYi/5lmIv+YZiL/mGYj/72VXv/03bv/9Ny6/7CDSP+YZiL/mGci/5lmI/+ZZiL/mWYj/5hmI/+YZiL/mGYj/5lnI/+ZZiL/mGYi/5lnIv+ZZiP/3b+S//Tcu//BmmX/mWYi/5hnIv+YZiL/mWci/5lnI/+ZZiP/mGYi/5hmIv+ZZiL/mGci/5lmIv+ZZiL/mWYj/59tK/+0ilH/m2gl/5lmIv+ZZiL/mWYi85lnIv+ZZyL/mWYi/5lmIv+ZZiL/mGYj/5lmIv+ZZiL/mWYi/5lmIv+YZiP/mWcj/5lmIv+ZZiP/mWYi85lmI2mZZiLzmWYi/5hmIv+ZZiL/mWcj/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGci/5lmIv+ZZiP/mWci85lmI2kAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAACAAAABAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACaZSJTmGYi05lmIv2ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL9mGYi05plIlMAAAAAmmUiU5llIv6ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyP/mWYi/5lmI/+YZiP/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiP/mGYi/5lmIv+ZZiL/mWUi/pplIlOYZiLTmWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWci/5lmIv+ZZiL/mWci/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi05lmIv2ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lnIv+YZiL/mWYi/5lmIv+ZZiL9mWYi/5lmIv+ZZiL/mWci/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZyP/mWci/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiP/mWci/5lmI//Fnmr/5smi/9m5jf+kdTT/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+aaCT/0rCB//Xdu//13bv/9d27/+HDmv+aZyT/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/nGon/9i4i//13bv/9d27//Xcu//13bv/9d27/8OaZv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWcj/5lmIv+ZZiL/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/55sKv/dvpT/9d27//Xdu//13bv/9Ny7//Xdu//13bv/8di1/6V2N/+ZZiL/mWYi/5hmI/+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5lnIv+hcC7/4sWc//Xdu//13bv/9d27//Xdu//03bv/9d27//Xdu//13bv/3b6T/5lmI/+ZZiP/mWYi/5lmIv+YZiL/mWYi/5hmI/+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiP/pHU0/+fKo//13bv/9d27//Xdu//13bv/9N27//DXtP/13bv/9d27//Tdu//13br/vZVe/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/6Z4Of/rz6n/9d27//Xdu//13br/9d27//Xduv/GoG3/sIRI//Tcuv/13bv/9d27//Xdu//v1rL/o3Iy/5lmIv+ZZiL/mWYi/5lmIv+YZyP/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWci/5lmIv+ZZiL/3r+V//Xdu//13bv/9d27//Xdu//03Ln/v5dh/5lmIv+ZZiL/z619//Xdu//13bv/9dy6//Xdu//ZuYz/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5hmIv+ZZiL/mWYi/5lnIv+YZiL/mGYj/5lmIv/q0Kr/9d27//Xdu//13bv/89q4/7mOV/+ZZiL/mWYi/5lnIv+fbSv/69Cq//Xdu//13bv/9N27//Tdu/+4j1f/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/8ikcf/13bv/9dy7//HYtP+ziE7/mWYi/5lmIv+ZZiL/mWYi/5lmIv+0ilD/9d27//Xdu//03bv/9d27/+3Tr/+gby7/mGYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/7aMU//DnWn/p3g5/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv/Us4X/9dy7//Xdu//13bv/9d27/9SzhP+ZZyL/mWYi/5lmIv+ZZiP/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6BwLv/t0q7/9d27//Xduv/13bv/9N27/7SIT/+ZZyP/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/7mQWP/13bv/9d27//Xdu//13bv/68+q/55tKv+ZZiL/mWYi/5lnI/+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZyL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/9u5jf/13bv/9d27//Xdu//13bv/z6x8/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWcj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5hmIv+ZZiL/mWci/5hmI/+ZZiP/mWYi/5lmIv+ZZiL/o3Iz//DWsv/13bv/9d27//Xdu//03Lr/sINI/5lmIv+ZZiL/mWci/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiP/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lmIv+YZiL/mWYi/5lmIv+ZZiL/vpZg//Xdu//13bv/9d27//Xdu//ny6X/nGoo/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lnIv+ZZiL/mWYi/5lnI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyP/3r+V//Xdu//13bv/9d27//Tdu//LpnX/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lnIv+ZZyL/mWYi/5lnIv+ZZiL/mWci/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+mdzj/8tm1//Xcu//13Lv/9d26//Lbuf+sfkH/mWYi/5lnIv+ZZiL/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lnI/+ZZiL/mWYi/5hmIv+ZZiL/mWci/5lmIv+ZZiP/mWYi/5lmIv+ZZiL/mWYi/5lmIv/DnWn/9d27//Tdu//13bv/9d27/+HDmv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWci/5lmI/+ZZiL/mWYi/5hmIv+ZZiL/mWci/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiP/mWYi/5poJP/ixZz/9d27//Xduv/13bv/9Ny6/5tpJP+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lnIv+ZZiL/mWcj/5lmIv+ZZiP/mWci/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lmIv+ZZiL/mWYi/6p8Pv/y2rf/9d27//Xdu//ewJX/mWYi/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/7CDSP/VtIb/zal4/6FwL/+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lmIv+YZiP/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWcj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/ZlnIv+ZZiP/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZyL/mWYi/5lmIv2YZiLTmWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mGYi05plIlOZZSL+mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5hlIv6aZSJTAAAAAJplIlOYZiLTmWYi/ZlmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv2YZyPTmmUiUwAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAADAAAABgAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACSbSQHl2gkMZlkIKCZZiLnmWYi/plmIv+ZZiL/mGYi/5lmI/+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv6ZZiLnmWQhoJdoHzGqVSoGAAAAAJJtJAeXZSFlmWYi55lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZyL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIuiXZSFlqlUqBpdoHzGZZiLnmWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmI/+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiLol2gfMZlkIaCZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWQhoJlmIueZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi55lmIv6ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/plmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5tpJv+tgUT/uZBY/7GFSv+ebCr/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZiL/mmck/86qev/s0q3/8Nez/+7Tr//SsIH/n24s/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+hcC//1bOF//Xdu//13bv/9d27//Xdu//13bv/xZ9r/5pnI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/6NzMv/VtIb/89q4//Xdu//13bv/9d27//Xdu//13bv/8Nez/7CFSf+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/oXAw/9/Bl//z27j/9d27//Xdu//13bv/9d27//Xdu//13bv/9d27/+LFnP+icjD/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5pnIv+oeTv/48ad//Xdu//13bv/9d27//Xdu//13Lv/9d27//Xdu//13bv/9d27//Pat//GoG3/m2gl/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6x/Q//gw5j/9Ny6//Xdu//13bv/9d27//Xdu//13bv/9d27//Xdu//13bv/9d27//Xduv/pzqf/rH5B/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/roFF/+nPqP/13Lr/9d27//Xdu//13bv/9N27//Xdu//13bv/9d27//Xdu//13bv/9d27//Xdu//13bv/3b+U/5pnJP+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5poJP+0iE7/7dGt//Xdu//13bv/9d27//Xdu//13bv/9d27//Xdu//z27j/9Ny6//Xdu//13bv/9d27//Xdu//13bv/9d27/8Sdaf+aZyT/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/7mQV//ozab/9d27//Xdu//13bv/9d27//Xdu//13Lv/9d27//HYtf/Oq3v/5Mef//Xduv/13bv/9N27//Xdu//13bv/9N27/+vQq/+ugUX/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/vpdg/+/Vsf/13bv/9d27//Xdu//13bv/9d27//Xduv/13bv/9Ny6/8Ocaf+dayn/roNH//TbuP/13bv/9d27//Xduv/13bv/9d27//Tcu//VtIb/nm0r/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+qfD//69Cr//Xdu//13bv/9d27//Xdu//13bv/9d27//Xdu//u1LD/vpZg/5lmIv+ZZiL/mWYi/8mkcv/027n/9d27//Xdu//13bv/9d27//Xdu//z2rf/uI9X/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+8k1z/8di1//Xdu//13bv/9d27//Xdu//13bv/9d27/+zSrf+8k1z/m2km/5lmIv+ZZiL/mWYi/6JyMf/fwZb/9d27//Xdu//13bv/9d27//Xdu//13Lv/6s+p/6d4Ov+ZZyL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+7klv/8di0//Xdu//13bv/9d27//Xdu//13bv/79ay/7KGTP+baSX/mWYi/5lmIv+ZZiL/mWYi/5pnIv+4jlb/79ay//Xdu//13bv/9d27//Xdu//13Lv/9d27/9q6jP+cayj/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mGYi/5lmIv+oeTv/5sqj//Xduv/13bv/9d27//Xcuv/ozKX/roFG/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+baCX/1LOF//Xdu//13bv/9d27//Xdu//13bv/9d27//HXtP+9lF3/mmcj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZiL/tIhO/96/lf/w17T/8Nez/9u7kP+whEj/mmck/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/o3Qz/+bKo//13bv/9d27//Xduv/13bv/9d27//Xdu//jxZz/pXU2/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6FwL/+neDr/p3g5/6BvLv+ZZiP/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/7OIT//x2LX/9d27//Xdu//13bv/9d27//Xdu//03Lr/0K1+/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mGYi/5lmIv+ZZiL/mWYi/51rKf/Rrn//9Ny6//Xdu//13Lv/9d27//Xdu//13bv/9Ny6/7WLUf+ZZyP/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+rfED/6c2n//Xduv/13bv/9d27//Xdu//13bv/9d27/+XJoP+neDn/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+aZyP/vZVe//Xdu//13bv/9d27//Xdu//13bv/9d27//Tbuf/Lpnb/nGon/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWcj/9i3i//13Lr/9d27//Xdu//13bv/9d27//Xdu//u1bD/roJG/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6l6PP/nyqP/9d27//Xdu//13bv/9d27//Xdu//13bv/4cOb/6BvLv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5poJP/Cm2b/8tm2//Xdu//13bv/9d27//Xdu//13bv/9d27/86qev+aZyP/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+fbiz/3sCW//Xduv/13bv/9d27//Xdu//13bv/9d27/+7Ur/+zhk3/mWYj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/rH9D/+7Ur//13bv/9N27//Xdu//13bv/9d27//Xduv/bu4//oG8u/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYj/8CZY//03Lr/9N27//Xdu//13bv/9d27//Xdu//z27j/wZtm/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6BvLv/bu5D/9d26//Xdu//13bv/9d27//Xdu//13bv/8di1/6p7Pf+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ziE7/7tSv//Xdu//13bv/9d27//Xdu//13bv/9d27/9y9kv+hcC//mWYi/5lmIv+ZZiL/mGYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+baCX/zKh3//Xdu//13bv/9d27//Xdu//13bv/9d27//HXtP+6kVn/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/nWso/+XIoP/13bv/9d27//Xdu//13bv/9d27//Xdu//Io3H/mmcj/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/7GGS//t0q3/9d27//Xdu//13bv/9d27//PbuP/Cm2f/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5xqJ//Lp3b/9Nu5//Xdu//13bv/9d27/+rPqf+pezz/mGYi/5lmIv+ZZyL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+fby3/z6x8/+rOqP/r0Kr/4sSb/6+CR/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZyL/mWYj/6V1Nv+oejz/nWso/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv6ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/plmIueZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi55lkIaCZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWQhoJdoHzGZZiLomWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiLnl2gkMapVKgaXZSFlmWYi6JlmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI+eXZCFlkm0kBwAAAACqVSoGl2gfMZlkIaCZZiLnmWYi/plmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmI/+ZZyL/mWYi/5lmIv6ZZiLnmWQhoJdoHzGSbSQHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" />
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Imported Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+
+    <!-- CSS -->
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            outline: none;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
         body {
+            font-family: "Raleway", Roboto-Regular, "Helvetica Neue", sans-serif;
             height: 100vh;
             /* https://webgradients.com/ */
-            background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+            background: -webkit-repeating-linear-gradient(-45deg, #0099ff, #ffffff);
             background-size: 300%;
         }
 
-        .planet {
-            max-width: 150px;
-            padding-bottom: 10%;
-            padding-top: 10%;
+        div.box {
+            background: #fff;
+            padding: 20px 20px 20px 20px;
+            border-radius: 5px 5px 5px 5px;
+            -moz-border-radius: 5px 5px 5px 5px;
+            -webkit-border-radius: 5px 5px 5px 5px;
+            border: 0px none #0099ff;
+            margin: 10% auto auto auto;
+            width: 50%;
+            height: auto;
+            box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .logo {
-            max-width: 400px;
-            padding-bottom: 10%;
-            padding-top: 10%;
+        .box h4 {
+
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #0099ff;
+            font-size: 2vw;
+            position: relative;
+            text-align: center;
+
+        }
+
+        .info {
+            padding-top: 5%;
+
         }
 
         div.info p {
             display: table-row;
-            text-align: left;
+            margin: auto 50% auto 50%;
             font: 100%;
-        }
-
-        #info-page {
-            position: absolute;
-            top: 10%;
-            left: 20%;
-            right: 20%;
-            bottom: 10%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fff;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #info-page .content {
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .content h2.header {
-            font-size: 18vw;
-            line-height: 1em;
-            position: relative;
-        }
-
-        .content h2.header:after {
-            position: absolute;
-            content: attr(data-text);
-            top: 0;
-            left: 0;
-            right: 0;
-            background-size: 400%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
-            animation: animate 10s ease-in-out infinite;
-        }
-
-        @keyframes animate {
-            0% {
-                background-position: 0 0;
-            }
-
-            25% {
-                background-position: 100% 0;
-            }
-
-            50% {
-                background-position: 100% 100%;
-            }
-
-            75% {
-                background-position: 0% 100%;
-            }
-
-            100% {
-                background-position: 0% 0%;
-            }
-        }
-
-        .content h1 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            color: rgb(63, 82, 189);
-            font-size: 5em;
-            max-width: 600px;
-            position: relative;
-            text-align: left;
+            font-weight: bold;
+            font-size: 15px;
+            font-size: 1.7vw;
 
         }
 
-        .content h1:after {
-            position: absolute;
-            content: attr(data-text);
-            top: 0;
-            left: 0;
-            right: 0;
-            text-shadow: 1px 1px 2px rgba(17, 101, 228, 0.4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        div.info p span {
+            display: table-cell;
+            padding: 5px;
+            /* width: 25%; */
+
         }
 
-        .content p {
-            font-size: 1.2em;
-            color: #0d0d0d;
-        }
+        p.smaller span {
+            color: #3D5266;
+            font-weight: lighter;
+            font-size: 15px;
+            font-size: 1.2vw;
 
-        .content .buttons {
-            margin: 25px 0;
-            display: inline-flex;
-        }
-
-        .content .buttons a {
-            display: inline-block;
-            margin: 0 10px;
-            text-decoration: none;
-            border: 2px solid #69a6ce;
-            color: #69a6ce;
-            font-weight: 500;
-            padding: 10px 25px;
-            border-radius: 25px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-
-        .content .buttons a:hover {
-            background: #69a6ce;
-            color: #fff;
-        }
-
-        .content .footer {
-            padding-bottom: 10%;
-            padding-top: 10%;
         }
 
         span.code {
             font-family: courier, monospace;
-            background-color: azure;
+            word-break: break-all;
+
+        }
+
+        img.header {
+            width: 10%;
+            margin: 2% auto 2% auto;
+            display: block;
+            height: auto;
+        }
+
+        img.logo {
+            width: 60%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10%;
+
+        }
+
+        div.footer {
+            padding: 0px 0px 0px 0px;
+            display: table;
+            margin: 1% auto 1% auto;
+            font-size: 1vw;
+        }
+
+        div.copyright {
+            padding-top: 20%;
+            font-size: .8vw;
+
         }
     </style>
+
+    <title>BLUE</title>
+
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png"
+        href="data:image/png;base64,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Iv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiP/mWci/5lmI//Fnmr/5smi/9m5jf+kdTT/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+aaCT/0rCB//Xdu//13bv/9d27/+HDmv+aZyT/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/nGon/9i4i//13bv/9d27//Xcu//13bv/9d27/8OaZv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWcj/5lmIv+ZZiL/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/55sKv/dvpT/9d27//Xdu//13bv/9Ny7//Xdu//13bv/8di1/6V2N/+ZZiL/mWYi/5hmI/+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5lnIv+hcC7/4sWc//Xdu//13bv/9d27//Xdu//03bv/9d27//Xdu//13bv/3b6T/5lmI/+ZZiP/mWYi/5lmIv+YZiL/mWYi/5hmI/+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiP/pHU0/+fKo//13bv/9d27//Xdu//13bv/9N27//DXtP/13bv/9d27//Tdu//13br/vZVe/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/6Z4Of/rz6n/9d27//Xdu//13br/9d27//Xduv/GoG3/sIRI//Tcuv/13bv/9d27//Xdu//v1rL/o3Iy/5lmIv+ZZiL/mWYi/5lmIv+YZyP/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWci/5lmIv+ZZiL/3r+V//Xdu//13bv/9d27//Xdu//03Ln/v5dh/5lmIv+ZZiL/z619//Xdu//13bv/9dy6//Xdu//ZuYz/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5hmIv+ZZiL/mWYi/5lnIv+YZiL/mGYj/5lmIv/q0Kr/9d27//Xdu//13bv/89q4/7mOV/+ZZiL/mWYi/5lnIv+fbSv/69Cq//Xdu//13bv/9N27//Tdu/+4j1f/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/8ikcf/13bv/9dy7//HYtP+ziE7/mWYi/5lmIv+ZZiL/mWYi/5lmIv+0ilD/9d27//Xdu//03bv/9d27/+3Tr/+gby7/mGYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/7aMU//DnWn/p3g5/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv/Us4X/9dy7//Xdu//13bv/9d27/9SzhP+ZZyL/mWYi/5lmIv+ZZiP/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6BwLv/t0q7/9d27//Xduv/13bv/9N27/7SIT/+ZZyP/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/7mQWP/13bv/9d27//Xdu//13bv/68+q/55tKv+ZZiL/mWYi/5lnI/+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZyL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/9u5jf/13bv/9d27//Xdu//13bv/z6x8/5hmIv+ZZiL/mWYi/5lmIv+ZZiL/mWcj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+YZiL/mWYi/5hmIv+ZZiL/mWci/5hmI/+ZZiP/mWYi/5lmIv+ZZiL/o3Iz//DWsv/13bv/9d27//Xdu//03Lr/sINI/5lmIv+ZZiL/mWci/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiP/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lmIv+YZiL/mWYi/5lmIv+ZZiL/vpZg//Xdu//13bv/9d27//Xdu//ny6X/nGoo/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lnIv+ZZiL/mWYi/5lnI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyP/3r+V//Xdu//13bv/9d27//Tdu//LpnX/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lnIv+ZZyL/mWYi/5lnIv+ZZiL/mWci/5lmIv+YZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+mdzj/8tm1//Xcu//13Lv/9d26//Lbuf+sfkH/mWYi/5lnIv+ZZiL/mWYi/5lnIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lnI/+ZZiL/mWYi/5hmIv+ZZiL/mWci/5lmIv+ZZiP/mWYi/5lmIv+ZZiL/mWYi/5lmIv/DnWn/9d27//Tdu//13bv/9d27/+HDmv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWci/5lmI/+ZZiL/mWYi/5hmIv+ZZiL/mWci/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiP/mWYi/5poJP/ixZz/9d27//Xduv/13bv/9Ny6/5tpJP+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5hmIv+ZZiL/mWYi/5lnIv+ZZiL/mWcj/5lmIv+ZZiP/mWci/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWci/5lm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I/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWQhoJlmIueZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi55lmIv6ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/plmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5tpJv+tgUT/uZBY/7GFSv+ebCr/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZiL/mmck/86qev/s0q3/8Nez/+7Tr//SsIH/n24s/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+hcC//1bOF//Xdu//13bv/9d27//Xdu//13bv/xZ9r/5pnI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/6NzMv/VtIb/89q4//Xdu//13bv/9d27//Xdu//13bv/8Nez/7CFSf+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/oXAw/9/Bl//z27j/9d27//Xdu//13bv/9d27//Xdu//13bv/9d27/+LFnP+icjD/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5pnIv+oeTv/48ad//Xdu//13bv/9d27//Xdu//13Lv/9d27//Xdu//13bv/9d27//Pat//GoG3/m2gl/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6x/Q//gw5j/9Ny6//Xdu//13bv/9d27//Xdu//13bv/9d27//Xdu//13bv/9d27//Xduv/pzqf/rH5B/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/roFF/+nPqP/13Lr/9d27//Xdu//13bv/9N27//Xdu//13bv/9d27//Xdu//13bv/9d27//Xdu//13bv/3b+U/5pnJP+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5poJP+0iE7/7dGt//Xdu//13bv/9d27//Xdu//13bv/9d27//Xdu//z27j/9Ny6//Xdu//13bv/9d27//Xdu//13bv/9d27/8Sdaf+aZyT/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/7mQV//ozab/9d27//Xdu//13bv/9d27//Xdu//13Lv/9d27//HYtf/Oq3v/5Mef//Xduv/13bv/9N27//Xdu//13bv/9N27/+vQq/+ugUX/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/vpdg/+/Vsf/13bv/9d27//Xdu//13bv/9d27//Xduv/13bv/9Ny6/8Ocaf+dayn/roNH//TbuP/13bv/9d27//Xduv/13bv/9d27//Tcu//VtIb/nm0r/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+qfD//69Cr//Xdu//13bv/9d27//Xdu//13bv/9d27//Xdu//u1LD/vpZg/5lmIv+ZZiL/mWYi/8mkcv/027n/9d27//Xdu//13bv/9d27//Xdu//z2rf/uI9X/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+8k1z/8di1//Xdu//13bv/9d27//Xdu//13bv/9d27/+zSrf+8k1z/m2km/5lmIv+ZZiL/mWYi/6JyMf/fwZb/9d27//Xdu//13bv/9d27//Xdu//13Lv/6s+p/6d4Ov+ZZyL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+7klv/8di0//Xdu//13bv/9d27//Xdu//13bv/79ay/7KGTP+baSX/mWYi/5lmIv+ZZiL/mWYi/5pnIv+4jlb/79ay//Xdu//13bv/9d27//Xdu//13Lv/9d27/9q6jP+cayj/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mGYi/5lmIv+oeTv/5sqj//Xduv/13bv/9d27//Xcuv/ozKX/roFG/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+baCX/1LOF//Xdu//13bv/9d27//Xdu//13bv/9d27//HXtP+9lF3/mmcj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZiL/tIhO/96/lf/w17T/8Nez/9u7kP+whEj/mmck/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/o3Qz/+bKo//13bv/9d27//Xduv/13bv/9d27//Xdu//jxZz/pXU2/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6FwL/+neDr/p3g5/6BvLv+ZZiP/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/7OIT//x2LX/9d27//Xdu//13bv/9d27//Xdu//03Lr/0K1+/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mGYi/5lmIv+ZZiL/mWYi/51rKf/Rrn//9Ny6//Xdu//13Lv/9d27//Xdu//13bv/9Ny6/7WLUf+ZZyP/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+rfED/6c2n//Xduv/13bv/9d27//Xdu//13bv/9d27/+XJoP+neDn/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+aZyP/vZVe//Xdu//13bv/9d27//Xdu//13bv/9d27//Tbuf/Lpnb/nGon/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWcj/9i3i//13Lr/9d27//Xdu//13bv/9d27//Xdu//u1bD/roJG/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6l6PP/nyqP/9d27//Xdu//13bv/9d27//Xdu//13bv/4cOb/6BvLv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5poJP/Cm2b/8tm2//Xdu//13bv/9d27//Xdu//13bv/9d27/86qev+aZyP/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+fbiz/3sCW//Xduv/13bv/9d27//Xdu//13bv/9d27/+7Ur/+zhk3/mWYj/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/rH9D/+7Ur//13bv/9N27//Xdu//13bv/9d27//Xduv/bu4//oG8u/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYj/8CZY//03Lr/9N27//Xdu//13bv/9d27//Xdu//z27j/wZtm/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/6BvLv/bu5D/9d26//Xdu//13bv/9d27//Xdu//13bv/8di1/6p7Pf+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ziE7/7tSv//Xdu//13bv/9d27//Xdu//13bv/9d27/9y9kv+hcC//mWYi/5lmIv+ZZiL/mGYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+baCX/zKh3//Xdu//13bv/9d27//Xdu//13bv/9d27//HXtP+6kVn/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/nWso/+XIoP/13bv/9d27//Xdu//13bv/9d27//Xdu//Io3H/mmcj/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/7GGS//t0q3/9d27//Xdu//13bv/9d27//PbuP/Cm2f/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5xqJ//Lp3b/9Nu5//Xdu//13bv/9d27/+rPqf+pezz/mGYi/5lmIv+ZZyL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+fby3/z6x8/+rOqP/r0Kr/4sSb/6+CR/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZyL/mWYj/6V1Nv+oejz/nWso/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv6ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/plmIueZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi55lkIaCZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI/+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWQhoJdoHzGZZiLomWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mGYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZyL/mWYi/5lmIv+ZZiLnl2gkMapVKgaXZSFlmWYi6JlmIv+ZZyL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmI+eXZCFlkm0kBwAAAACqVSoGl2gfMZlkIaCZZiLnmWYi/plmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mWYi/5lmIv+ZZiL/mGYi/5lmI/+ZZyL/mWYi/5lmIv6ZZiLnmWQhoJdoHzGSbSQHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" />
+
+
 </head>
 
 <body onload="checkRefresh();">
-    <div id="info-page">
-        <div class="content">
 
-            <h1 data-text="Blue">
-                Blue
-            </h1>
+    <!-- Primary Page Layout -->
 
-            <div class="info">
+    <div class="box">
 
-                <p><strong><span>Server name:</span>&nbsp;<span class="code">_hostname</span></strong></p>
-                <p><span>Server address:</span>&nbsp;<span class="code">_server_addr:_server_port</span></p>
-                <p class="smaller"><span>Status code:</span>&nbsp;<span class="code">_status</span></p>
-                <p class="smaller"><span>URI:</span>&nbsp;<span class="code">_request_uri</span></p>
-                <p class="smaller"><span>Cookies:</span>&nbsp;<span class="code">_http_cookie</span></p>
-                <p class="smaller"><span>User-Agent:</span>&nbsp;<span class="code">_http_user_agent</span></p>
-                <p class="smaller"><span>Date:</span>&nbsp;<span class="code">_time_local</span></p>
-                <p class="requestid"><span>Request ID:</span>&nbsp;<span class="code">_request_id</span></p>
-            </div>
+        <h4 data-text="Server Information">
+            BLUE:
+        </h4>
+        <div class="info">
 
-
-            <div class="footer"><input type="checkbox" id="check" onchange="changeCookie()"> Auto
-                Refresh
-            </div>
-
-
+            <p class="smaller"><span><strong>Server Name:</strong></span>&nbsp;<span class="code">_hostname</span></p>
+            <p class="smaller"><span><strong>Server address:</strong></span>&nbsp;<span
+                    class="code">_server_addr:_server_port</span></p>
+            <p class="smaller"><span><strong>Status code:</strong></span>&nbsp;<span class="code">_status</span></p>
+            <p class="smaller"><span><strong>URI:</strong></span>&nbsp;<span class="code">_request_uri</span></p>
+            <p class="smaller"><span><strong>Cookies:</strong></span>&nbsp;<span class="code">_http_cookie</span></p>
+            <p class="smaller"><span><strong>User-Agent:</strong></span>&nbsp;<span class="code">_http_user_agent</span>
+            </p>
+            <p class="smaller"><span><strong>Date:</strong></span>&nbsp;<span class="code">_time_local</span></p>
+            <p class="smaller"><span><strong>Request ID:</strong></span>&nbsp;<span class="code">_request_id</span>
+            </p>
         </div>
+
+
+        <!-- Footer -->
+
+        <div class="footer"><input type="checkbox" id="check" onchange="changeCookie()"> Auto Refresh
+        </div>
+    </div>
+
     </div>
 
     <!-- Place Javascript last -->
@@ -208,7 +171,7 @@
         var ref;
         function checkRefresh() {
 
-            if (document.cookie.indexOf('refresh=1') != -1 ) {
+            if (document.cookie.indexOf('refresh=1') != -1) {
                 document.getElementById("check").checked = true;
                 ref = setTimeout(function () { location.reload(); }, 1000);
             } else {
@@ -225,6 +188,8 @@
         }
 
     </script>
+
+    <!-- End Document -->
 
 </body>
 

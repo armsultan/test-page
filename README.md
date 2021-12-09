@@ -138,6 +138,15 @@ docker build --no-cache -t test-page:snapt -f DockerfileSnapt .
 docker run -d -p 80:80 test-page:snapt
 ```
 
+### Mount local web content
+
+```bash
+# Mount local files, For example
+docker run -d -p 80:80 \
+    -v $PWD/html-snapt/index.html:/usr/share/nginx/html/index.html \
+    test-page:snapt
+```
+
 ### Push to your own Docker Hub
 
 ```
