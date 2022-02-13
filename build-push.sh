@@ -6,8 +6,8 @@ docker build --no-cache -t test-page:plain-text-nonroot -f DockerfilePlainTextNo
 
 # JSON PAGE
 # Build 
-docker build --no-cache -t test-page:json -f DockerfilePlainJSON .
-docker build --no-cache -t test-page:json-nonroot -f DockerfilePlainJSONNonRoot .
+docker build --no-cache -t test-page:json -f DockerfileJSON .
+docker build --no-cache -t test-page:json-nonroot -f DockerfileJSONNonRoot .
 
 # HTML SIMPLE PAGE
 # Build 

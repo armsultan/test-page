@@ -6,7 +6,7 @@ Simple backends running on NGINX for proxy and load balancing demos
 NGINX webserver that serves a simple page containing its hostname, IP address
 and port as wells as the request URI and the local time of the webserver.
 
-There is a non-root flavour of every image with NGINX webserver available on
+There is a non-root flavour of every image with webserver available on
 port 8080.
 
 ## Screenshots
