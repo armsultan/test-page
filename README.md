@@ -6,7 +6,8 @@ Simple backends running on NGINX for proxy and load balancing demos
 NGINX webserver that serves a simple page containing its hostname, IP address
 and port as wells as the request URI and the local time of the webserver.
 
-
+There is a non-root flavour of every image with NGINX webserver available on
+port 8080.
 
 ## Screenshots
 
@@ -73,6 +74,8 @@ Test pages include:
 
 ### Pull and run from Docker Hub
 
+**Web Server running as root, webpages published on port 80**
+
 ```bash
 # Plain text page
 docker run -P -d armsultan/test-page:plain-text
@@ -91,6 +94,28 @@ docker run -P -d armsultan/test-page:green
 
 # HTML Snapt branded page
 docker run -P -d armsultan/test-page:snapt
+```
+
+**Web Server running as root, webpages published on port 8080**
+
+```bash
+# Plain text page
+docker run -P -d armsultan/test-page:plain-text-nonroot
+
+# JSON page
+docker run -P -d armsultan/test-page:json-nonroot
+
+# HTML Simple page
+docker run -P -d armsultan/test-page:html-nonroot
+
+# HTML Blue page
+docker run -P -d armsultan/test-page:blue-nonroot
+
+# HTML Green page
+docker run -P -d armsultan/test-page:green-nonroot
+
+# HTML Snapt branded page
+docker run -P -d armsultan/test-page:snapt-nonroot
 ```
 
 ### Build and Run Docker images locally
