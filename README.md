@@ -1,13 +1,13 @@
 
 # Test-page
 
-Simple backends running on NGINX for proxy and load balancing demos 
+Simple web apps running on NGINX for proxy and load balancing demos 
 
 NGINX webserver that serves a simple page containing its hostname, IP address
 and port as wells as the request URI and the local time of the webserver.
 
-There is a non-root flavour of every image with webserver available on
-port 8080.
+There is a non-root image flavour of each available and it runs on port 8080
+instead of typical port 80
 
 ## Screenshots
 
