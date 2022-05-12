@@ -101,56 +101,56 @@ Test pages include:
 
 ```bash
 # Plain text page
-docker run -P -d armsultan/test-page:plain-text
+docker run -p 80:80 -d armsultan/test-page:plain-text
 
 # JSON page
-docker run -P -d armsultan/test-page:json
+docker run -p 80:80 -d armsultan/test-page:json
 
 # HTML Simple page
-docker run -P -d armsultan/test-page:html
+docker run -p 80:80 -d armsultan/test-page:html
 
 # HTML Blue page
-docker run -P -d armsultan/test-page:blue
+docker run -p 80:80 -d armsultan/test-page:blue
 
 # HTML Green page
-docker run -P -d armsultan/test-page:green
+docker run -p 80:80 -d armsultan/test-page:green
 
 # HTML Planets page
-docker run -P -d armsultan/test-page:planets
+docker run -p 80:80 -d armsultan/test-page:planets
 
 # HTML Moons page
-docker run -P -d armsultan/test-page:moons
+docker run -p 80:80 -d armsultan/test-page:moons
 
 # HTML Snapt branded page
-docker run -P -d armsultan/test-page:snapt
+docker run -p 80:80 -d armsultan/test-page:snapt
 ```
 
 **Web Server running as root, webpages published on port 8080**
 
 ```bash
 # Plain text page
-docker run -P -d armsultan/test-page:plain-text-nonroot
+docker run -p 8080:8080 -d armsultan/test-page:plain-text-nonroot
 
 # JSON page
-docker run -P -d armsultan/test-page:json-nonroot
+docker run -p 8080:8080 -d armsultan/test-page:json-nonroot
 
 # HTML Simple page
-docker run -P -d armsultan/test-page:html-nonroot
+docker run -p 8080:8080 -d armsultan/test-page:html-nonroot
 
 # HTML Blue page
-docker run -P -d armsultan/test-page:blue-nonroot
+docker run -p 8080:8080 -d armsultan/test-page:blue-nonroot
 
 # HTML Green page
-docker run -P -d armsultan/test-page:green-nonroot
+docker run -p 8080:8080 -d armsultan/test-page:green-nonroot
 
 # HTML Planets page
-docker run -P -d armsultan/test-page:planets-nonroot
+docker run -p 8080:8080 -d armsultan/test-page:planets-nonroot
 
 # HTML Moons page
-docker run -P -d armsultan/test-page:moons-nonroot
+docker run -p 8080:8080 -d armsultan/test-page:moons-nonroot
 
 # HTML Snapt branded page
-docker run -P -d armsultan/test-page:snapt-nonroot
+docker run -p 8080:8080 -d armsultan/test-page:snapt-nonroot
 ```
 
 ### Build and Run Docker images locally
