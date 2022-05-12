@@ -31,6 +31,18 @@ docker build --no-cache -t test-page:green-nonroot -f DockerfileGreenNonRoot .
 docker build --no-cache -t test-page:planets -f DockerfilePlanets .
 docker build --no-cache -t test-page:planets-nonroot -f DockerfilePlanetsNonRoot .
 
+# HTML MOON PAGES
+docker build --no-cache -t test-page:moons -f DockerfileMoons .
+docker build --no-cache -t test-page:moons-nonroot -f DockerfileMoonsNonRoot .
+
+# HTML SUN SINGLE PAGE
+docker build --no-cache -t test-page:sun-single-page -f DockerfileHtmlSunSinglePage .
+docker build --no-cache -t test-page:sun-single-page-nonroot -f DockerfileHtmlSunSinglePageNonRoot .
+
+# HTML MOON SINGLE PAGE
+docker build --no-cache -t test-page:moon-single-page -f DockerfileHtmlMoonSinglePage .
+docker build --no-cache -t test-page:moon-single-page-nonroot -f DockerfileHtmlMoonSinglePageNonRoot .
+
 # HTML SNAPT INC BRANDED PAGE
 docker build --no-cache -t test-page:snapt -f DockerfileSnapt .
 docker build --no-cache -t test-page:snapt-nonroot -f DockerfileSnaptNonRoot .
@@ -71,6 +83,12 @@ docker push armsultan/test-page:planets
 
 docker tag test-page:planets-nonroot armsultan/test-page:planets-nonroot
 docker push armsultan/test-page:planets-nonroot
+
+docker tag test-page:moons armsultan/test-page:moons
+docker push armsultan/test-page:moons
+
+docker tag test-page:moons-nonroot armsultan/test-page:moons-nonroot
+docker push armsultan/test-page:moons-nonroot
 
 docker tag test-page:snapt armsultan/test-page:snapt
 docker push armsultan/test-page:snapt
