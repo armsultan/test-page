@@ -67,6 +67,29 @@ Test pages include:
 
 ![html-green](media/html-planets.png)
 
+`armsultan/test-page:html-moons`
+Test pages include:
+ * `ariel.html`
+ * `callisto.html`
+ * `dione.html`
+ * `enceladus.html`
+ * `europa.html`
+ * `ganymede.html`
+ * `lo.html`
+ * `mimas.html`
+ * `miranda.html`
+ * `moon.html`
+ * `oberon.html`
+ * `proteus.html`
+ * `rhea.html`
+ * `tethys.html`
+ * `titan.html`
+ * `titania.html`
+ * `triton.html`
+ * `umbriel.html`
+
+![html-green](media/html-moons.png)
+
 `armsultan/test-page:html-snapt`
 ![html-snapt](media/html-snapt.png)
 
@@ -92,6 +115,12 @@ docker run -P -d armsultan/test-page:blue
 # HTML Green page
 docker run -P -d armsultan/test-page:green
 
+# HTML Planets page
+docker run -P -d armsultan/test-page:planets
+
+# HTML Moons page
+docker run -P -d armsultan/test-page:moons
+
 # HTML Snapt branded page
 docker run -P -d armsultan/test-page:snapt
 ```
@@ -114,6 +143,12 @@ docker run -P -d armsultan/test-page:blue-nonroot
 # HTML Green page
 docker run -P -d armsultan/test-page:green-nonroot
 
+# HTML Planets page
+docker run -P -d armsultan/test-page:planets-nonroot
+
+# HTML Moons page
+docker run -P -d armsultan/test-page:moons-nonroot
+
 # HTML Snapt branded page
 docker run -P -d armsultan/test-page:snapt-nonroot
 ```
@@ -132,7 +167,6 @@ docker run -d -p 80:80 test-page:plain-text
 docker build --no-cache -t test-page:json -f DockerfilePlainJSON .
 # Run
 docker run -d -p 80:80 test-page:json
-
 
 # HTML SIMPLE PAGE
 # Build 
@@ -156,6 +190,11 @@ docker run -d -p 80:80 test-page:green
 docker build --no-cache -t test-page:planets -f DockerfilePlanets .
 # Run
 docker run -d -p 80:80 test-page:planets
+
+# HTML MOONS PAGES
+docker build --no-cache -t test-page:moons -f DockerfileMoons .
+# Run
+docker run -d -p 80:80 test-page:moons
 
 # HTML SNAPT INC BRANDED PAGE
 docker build --no-cache -t test-page:snapt -f DockerfileSnapt .

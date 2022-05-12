@@ -1,0 +1,4 @@
+FROM nginx:mainline-alpine
+RUN rm /etc/nginx/conf.d/*
+ADD html-moons/default.conf /etc/nginx/conf.d/
+COPY html-moons/ /usr/share/nginx/html/

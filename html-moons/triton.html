@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="A simple test page">
+    <meta name="author" content="Armand Sultantono">
+
+    <meta property="og:title" content="A simple test page">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A simple test page">
+
+    <title>Triton, a moon of Neptune</title>
+    <link rel="icon" type="image/png" href="images/triton/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body onload="checkRefresh();">
+    <div id="info-page">
+        <div class="content">
+            <img alt="A Moon called triton" class="planet" src="images/triton/triton.png" />
+
+            <h4 data-text="A Moon called triton">
+                Triton (Neptune)
+            </h4>
+
+            <div class="info">
+
+                <p><strong><span>Server name:</span>&nbsp;<span class="code">_hostname</span></strong></p>
+                <p><span>Server address:</span>&nbsp;<span class="code">_server_addr:_server_port</span></p>
+                <p class="smaller"><span>Status code:</span>&nbsp;<span class="code">_status</span></p>
+                <p class="smaller"><span>URI:</span>&nbsp;<span class="code">_request_uri</span></p>
+                <p class="smaller"><span>Cookies:</span>&nbsp;<span class="code">_http_cookie</span></p>
+                <p class="smaller"><span>User-Agent:</span>&nbsp;<span class="code">_http_user_agent</span></p>
+                <p class="smaller"><span>Date:</span>&nbsp;<span class="code">_time_local</span></p>
+                <p class="requestid"><span>Request ID:</span>&nbsp;<span class="code">_request_id</span></p>
+            </div>
+
+
+            <div class="footer"><input type="checkbox" id="check" onchange="changeCookie()">
+                <label for="check">Auto Refresh</label>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Place Javascript last -->
+    <script src="js/autoreload.js"></script>
+
+</body>
+
+</html>
