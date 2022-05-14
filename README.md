@@ -11,7 +11,8 @@ instead of typical port 80
 
 ## Screenshots
 
-`armsultan/test-page:plain-text`
+### `armsultan/test-page:plain-text`
+
 ```bash
 curl <ip>:<port>
 
@@ -25,7 +26,8 @@ Date: 08/Dec/2021:20:17:06 +0000
 Request ID: e51ab69a0c78cdec290affe3ce65d841
 ```
 
-`armsultan/test-page:json`
+### `armsultan/test-page:json`
+
 ```bash
 curl <ip>:<port>
 {
@@ -44,16 +46,17 @@ curl <ip>:<port>
 }
 ```
 
-`armsultan/test-page:html`
+### `armsultan/test-page:html`
 ![html-simple](media/html-simple.png)
 
-`armsultan/test-page:html-blue`
+### `armsultan/test-page:html-blue`
 ![html-blue](media/html-blue.png)
 
-`armsultan/test-page:html-green`
+### `armsultan/test-page:html-green`
 ![html-green](media/html-green.png)
 
-`armsultan/test-page:html-planets`
+### `armsultan/test-page:html-planets`
+
 Test pages include:
  * `earth.html`
  * `jupiter.html`
@@ -65,9 +68,10 @@ Test pages include:
  * `uranus.html`
  * `venus.html`
 
-![html-green](media/html-planets.png)
+![html-planets](media/html-planets.png)
 
-`armsultan/test-page:html-moons`
+### `armsultan/test-page:html-moons`
+
 Test pages include:
  * `ariel.html`
  * `callisto.html`
@@ -88,10 +92,22 @@ Test pages include:
  * `triton.html`
  * `umbriel.html`
 
-![html-green](media/html-moons.png)
+![html-moons](media/html-moons.png)
 
-`armsultan/test-page:html-snapt`
+### `armsultan/test-page:html-snapt`
+
 ![html-snapt](media/html-snapt.png)
+
+### `armsultan/solar-system:[planet|moon]`
+
+Each Planet and Moon in [html-solar-system](html-solar-system) has a
+container image. They are all single page HTML files.
+
+Examples of sun (`armsultan/solar-system:sun`) and moon (`armsultan/solar-system:sun`)
+
+![html-solar-system:sun](media/solar-system-sun.png)
+
+![html-solar-system:moon](media/solar-system-moon.png)
 
 ## How-to
 
@@ -100,122 +116,66 @@ Test pages include:
 **Web Server running as root, webpages published on port 80**
 
 ```bash
-# Plain text page
+# Plain text page (Root and Non-Root)
 docker run -p 80:80 -d armsultan/test-page:plain-text
-
-# JSON page
-docker run -p 80:80 -d armsultan/test-page:json
-
-# HTML Simple page
-docker run -p 80:80 -d armsultan/test-page:html
-
-# HTML Blue page
-docker run -p 80:80 -d armsultan/test-page:blue
-
-# HTML Green page
-docker run -p 80:80 -d armsultan/test-page:green
-
-# HTML Planets page
-docker run -p 80:80 -d armsultan/test-page:planets
-
-# HTML Moons page
-docker run -p 80:80 -d armsultan/test-page:moons
-
-# HTML Snapt branded page
-docker run -p 80:80 -d armsultan/test-page:snapt
-```
-
-**Web Server running as root, webpages published on port 8080**
-
-```bash
-# Plain text page
 docker run -p 8080:8080 -d armsultan/test-page:plain-text-nonroot
 
-# JSON page
+# JSON page (Root and Non-Root)
+docker run -p 80:80 -d armsultan/test-page:json
 docker run -p 8080:8080 -d armsultan/test-page:json-nonroot
 
-# HTML Simple page
+# HTML Simple page (Root and Non-Root)
+docker run -p 80:80 -d armsultan/test-page:html
 docker run -p 8080:8080 -d armsultan/test-page:html-nonroot
 
-# HTML Blue page
+# HTML Blue page (Root and Non-Root)
+docker run -p 80:80 -d armsultan/test-page:blue
 docker run -p 8080:8080 -d armsultan/test-page:blue-nonroot
 
-# HTML Green page
+# HTML Green page (Root and Non-Root)
+docker run -p 80:80 -d armsultan/test-page:green
 docker run -p 8080:8080 -d armsultan/test-page:green-nonroot
 
-# HTML Planets page
+# HTML Planets page (Root and Non-Root)
+docker run -p 80:80 -d armsultan/test-page:planets
 docker run -p 8080:8080 -d armsultan/test-page:planets-nonroot
 
-# HTML Moons page
+# HTML Moons page (Root and Non-Root)
+docker run -p 80:80 -d armsultan/test-page:moons
 docker run -p 8080:8080 -d armsultan/test-page:moons-nonroot
 
-# HTML Snapt branded page
+# HTML Snapt branded page (Root and Non-Root)
+docker run -p 80:80 -d armsultan/test-page:snapt
 docker run -p 8080:8080 -d armsultan/test-page:snapt-nonroot
+
 ```
 
-### Build and Run Docker images locally
 
-```bash
-# PLAIN TEXT PAGE
-# Build 
-docker build --no-cache -t test-page:plain-text -f DockerfilePlainText .
-# Run
-docker run -d -p 80:80 test-page:plain-text
+### Build and Push Docker images to Container repo
 
-# JSON PAGE
-# Build 
-docker build --no-cache -t test-page:json -f DockerfilePlainJSON .
-# Run
-docker run -d -p 80:80 test-page:json
+See the simple build scripts provided to build the container images and push to
+your Docker hub container repository
 
-# HTML SIMPLE PAGE
-# Build 
-docker build --no-cache -t test-page:html -f DockerfileHtml .
-# Run
-docker run -d -p 80:80 test-page:html
+To build Multi-Arch images you need [`buildx`](https://github.com/docker/buildx).
+See the [buildx Getting started guide](https://github.com/docker/buildx#getting-started)
 
-# HTML BLUE PAGE
-# Build 
-docker build --no-cache -t test-page:blue -f DockerfileBlue .
-# Run
-docker run -d -p 80:80 test-page:blue
 
-# HTML GREEN PAGE
-# Build 
-docker build --no-cache -t test-page:green -f DockerfileGreen .
-# Run
-docker run -d -p 80:80 test-page:green
+Build images
 
-# HTML PLANET PAGES
-docker build --no-cache -t test-page:planets -f DockerfilePlanets .
-# Run
-docker run -d -p 80:80 test-page:planets
+ * Build Images and push to docker hub - `build-push.sh` 
+ * Build **Multi-Arch** Images and push to docker hub - `build-solar-system-multiarch.sh` 
 
-# HTML MOONS PAGES
-docker build --no-cache -t test-page:moons -f DockerfileMoons .
-# Run
-docker run -d -p 80:80 test-page:moons
+Build solar-system images
 
-# HTML SNAPT INC BRANDED PAGE
-docker build --no-cache -t test-page:snapt -f DockerfileSnapt .
-# Run
-docker run -d -p 80:80 test-page:snapt
-```
+ * Build Images and push to docker hub - `build-solar-system.sh` 
+ * Build **Multi-Arch** Images and push to docker hub - `build-solar-system-multiarch.sh` 
+
 
 ### Mount local web content
 
 ```bash
 # Mount local files, For example
 docker run -d -p 80:80 \
-    -v $PWD/html-snapt/index.html:/usr/share/nginx/html/index.html \
-    test-page:snapt
+    -v $PWD/html-simple/index.html:/usr/share/nginx/html/index.html \
+    test-page:html
 ```
-
-### Push to your own Docker Hub
-
-```
-# For example
-docker tag test-page:plain-text armsultan/test-page:plain-text
-docker push armsultan/test-page:plain-text
-```
-
