@@ -13,9 +13,10 @@ docker buildx inspect --bootstrap
 for filename in html-solar-system/*.html
 do
   NAME="$(basename $filename .html)"
+  echo "--------------"
   echo "Building $NAME"
-  sed -i "s/_PLACEHOLDER_NAME_/$NAME/g" DockerfileHtmlSolarSystem
-  sed -i "s/_PLACEHOLDER_NAME_/$NAME/g" DockerfileHtmlSolarSystemNonRoot
+  sed -i '' "s/_PLACEHOLDER_NAME_/$NAME/g" DockerfileHtmlSolarSystem
+  sed -i '' "s/_PLACEHOLDER_NAME_/$NAME/g" DockerfileHtmlSolarSystemNonRoot
   # Build root and nonroot images
   docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 \
         -f DockerfileHtmlSolarSystem \
@@ -29,8 +30,8 @@ do
   docker buildx imagetools inspect $REPO_USERNAME/solar-system:$NAME
 
   # Set file back to placeholder values
-  sed -i "s/$NAME/_PLACEHOLDER_NAME_/g" DockerfileHtmlSolarSystem
-  sed -i "s/$NAME/_PLACEHOLDER_NAME_/g" DockerfileHtmlSolarSystemNonRoot
+  sed -i '' "s/$NAME/_PLACEHOLDER_NAME_/g" DockerfileHtmlSolarSystem
+  sed -i '' "s/$NAME/_PLACEHOLDER_NAME_/g" DockerfileHtmlSolarSystemNonRoot
   # Delete docker images
   docker image rm $REPO_USERNAME/solar-system:$NAME
   docker image rm $REPO_USERNAME/solar-system:$NAME-nonroot

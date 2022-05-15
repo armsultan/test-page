@@ -148,6 +148,9 @@ docker run -p 8080:8080 -d armsultan/test-page:moons-nonroot
 docker run -p 80:80 -d armsultan/test-page:snapt
 docker run -p 8080:8080 -d armsultan/test-page:snapt-nonroot
 
+# HTML Solar-System pages (Root and Non-Root), e.g. moon
+docker run -p 80:80 -d armsultan/solar-system:moon
+docker run -p 8080:8080 -d armsultan/solar-system:moon-nonroot
 ```
 
 
